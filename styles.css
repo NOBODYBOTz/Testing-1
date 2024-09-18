@@ -1,101 +1,48 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(to bottom, #33ccff, #ff99cc, #ccff99, #ffcc66, #66ccff, #cc99ff, #ff66cc, #99ffcc);
-  animation: fade-in 2s;
+  background-color: #f7f7f7;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   background-color: #333;
   color: #fff;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom, #333, #555);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-#profile-picture {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 10px;
-  transition: transform 0.5s;
-  border: 2px solid #33ccff;
+.welcome-message {
+  margin-right: 20px;
 }
 
-#profile-picture:hover {
-  transform: scale(1.1);
-  border: 2px solid #ff99cc;
+#welcome-text {
+  font-size: 24px;
 }
 
 #name {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
-  color: #ccff99;
 }
 
-main.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+.profile-picture-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
   padding: 20px;
+  margin-bottom: 20px;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-  background-color: #f7f7f7;
-  padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  animation: slide-in 1.5s;
-  border: 1px solid #66ccff;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.skill-card {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to bottom, #cc99ff, #ff66cc);
-}
-
-.experience-carousel {
-  overflow-hidden;
-}
-
-.experience-card {
-  background-color: #f7f7f7;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to bottom, #99ffcc, #33ccff);
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
