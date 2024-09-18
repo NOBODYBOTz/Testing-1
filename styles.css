@@ -2,6 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
+  animation: fade-in 2s;
 }
 
 header {
@@ -9,6 +10,9 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #profile-picture {
@@ -16,6 +20,11 @@ header {
   height: 100px;
   border-radius: 50%;
   margin: 10px;
+  transition: transform 0.5s;
+}
+
+#profile-picture:hover {
+  transform: scale(1.1);
 }
 
 #name {
@@ -23,18 +32,26 @@ header {
   font-weight: bold;
 }
 
-section {
+main.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
   background-color: #fff;
   padding: 20px;
-  margin: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slide-in 1.5s;
 }
 
 h2 {
   font-size: 18px;
   font-weight: bold;
   margin-top: 0;
+  color: #333;
 }
 
 ul {
@@ -50,5 +67,23 @@ li {
 #intro-text, #bio-text, #contact-text {
   font-size: 16px;
   color: #666;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 ```
